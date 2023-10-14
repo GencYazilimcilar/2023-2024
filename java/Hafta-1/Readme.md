@@ -1,26 +1,26 @@
-# DERS-1
 ![](assets/banner.png)
+# Hafta 1
 # İçindekiler
-
-- [DERS-1](#ders-1)
-- [İçindekiler](#i̇çindekiler)
-  - [Yazılım Nedir?](#yazılım-nedir)
-  - [Java Nedir?](#java-nedir)
-    - [Java Nasıl Çalışır?](#java-nasıl-çalışır)
-      - [Derleme Aşaması](#derleme-aşaması)
-      - [Yürütme Aşaması](#yürütme-aşaması)
-      - [Java'nın Platform Bağımsızlığı](#javanın-platform-bağımsızlığı)
-      - [Java'nın Yüksek Verimliliği](#javanın-yüksek-verimliliği)
-      - [Java'nın Çok İşlevliliği](#javanın-çok-i̇şlevliliği)
-    - [Java Kurulum Aşamaları](#java-kurulum-aşamaları)
-  - [İlk Java programı](#i̇lk-java-programı)
-  - [Veri Tipleri](#veri-tipleri)
-  - [Değişkenler](#değişkenler)
-  - [Operatorler](#operatorler)
-    - [Aritmetik Operatörler](#aritmetik-operatörler)
-    - [Mantıksal Operatörler](#mantıksal-operatörler)
-    - [Karşılaştırma Operatörleri](#karşılaştırma-operatörleri)
-    - [Diğer Operatörler](#diğer-operatörler)
+- [Yazılım Nedir?](#yazılım-nedir)
+- [Java Nedir?](#java-nedir)
+  - [Java Nasıl Çalışır?](#java-nasıl-çalışır)
+    - [Derleme Aşaması](#derleme-aşaması)
+    - [Yürütme Aşaması](#yürütme-aşaması)
+    - [Java'nın Platform Bağımsızlığı](#javanın-platform-bağımsızlığı)
+    - [Java'nın Yüksek Verimliliği](#javanın-yüksek-verimliliği)
+    - [Java'nın Çok İşlevliliği](#javanın-çok-i̇şlevliliği)
+- [Java Kurulum Aşamaları](#java-kurulum-aşamaları)
+- [İlk Java programı](#i̇lk-java-programı)
+- [Veri Tipleri](#veri-tipleri)
+- [Değişkenler](#değişkenler)
+  - [Değişkenleri Ekrana Yazma](#değişkenleri-ekrana-yazma)
+  - [Değişken Tanımlama Kuralları](#değişken-tanımlama-kuralları)
+- [Operatorler](#operatorler)
+  - [Aritmetik Operatörler](#aritmetik-operatörler)
+  - [Atama Operatörleri](#atama-operatörleri)
+  - [İlişkisel Operatörler](#ilişkisel-operatörler)
+  - [Karşılaştırma Operatörleri](#karşılaştırma-operatörleri)
+  - [Diğer Operatörler](#diğer-operatörler)
   
 ## Yazılım Nedir?
 Yazılım, bilgisayarların ve diğer elektronik cihazların çalışmasını sağlayan programların ve verilerin tümüdür. Yazılım, bilgisayar donanımının nasıl kullanılacağını ve belirli görevleri nasıl yerine getireceğini belirler.
@@ -84,8 +84,8 @@ Java'nın çok işlevliliği, aşağıdaki faktörlere bağlıdır:
 ## İlk Java programı
 
 ```java
-public static void main(String args[]){
-    System.out.println("Hello PAUGYT");
+public static void main(String[] args){
+    System.out.println("Hello PAUGYT"); //System.out.println() içerisindekileri ekrana yazar
 }
 ```
 ## Yorum Satırı
@@ -95,8 +95,8 @@ Java da sıklıkla kullandığımız 2 adet yorum satırı işareti vardır bunl
 - //
 - /* */
 işaretleridir.
-- ```java
-  public static void main(String args[]){
+```java
+  public static void main(String[] args){
     System.out.println("Hello PAUGYT");
     //Tek satırlık yorum satırı
     /*
@@ -121,15 +121,44 @@ Veri tipi, bir değişkenin tutabileceği verinin türünü tanımlar. Veri tipl
 
 Değişken, bir programda saklanan bir veriyi temsil eden bir isimdir. Değişkenler, veri tipine göre farklı değerler tutabilir.
 ```java
-public static void main(String args[]){
+public static void main(String[] args){
     int x = 5; // Bir tamsayı değişkeni.
-    String gyt = "Genç Yazılımcılar Topluluğu"; // Bir Metinsel değişken.
+    String gyt = "Genc Yazilimcilar Toplulugu"; // Bir Metinsel değişken.
     char karakter = 'g'; // Bir karakter değişkeni.
     boolean yD = true; // Bir mantıksal veri türü değişkeni. true/false
-    double ondalıklıSayı: 20.22; //Bir ondalıklı sayı değişkeni. 
+    float kucukOndalikliSayi= 20.22 //Bir ondalıklı sayı değişkeni.  7 haneli hassasiyet sunar.
+    double buyukOndalikliSayi= 20.222222222; 20.22; //Bir ondalıklı sayı değişkeni.  15 haneli hassasiyet sunar.
 }
 ```
-
+### Değişkenleri Ekrana Yazma
+```java
+public static void main(String[] args){
+    int x = 5;
+    String gyt = "Genc Yazilimcilar Toplulugu";
+    char karakter = 'g'; 
+    boolean yD = true;
+    float kucukOndalikliSayi= 20.22
+    double buyukOndalikliSayi= 20.222222222;
+    System.out.println(x);
+    System.out.println(gyt);
+    System.out.println(yD);
+    System.out.println(kucukOndalikliSayi);
+    System.out.println(buyukOndalikliSayi);
+}
+```
+### Değişken Tanımlama Kuralları
+Java'da değişken tanımlarken belirli kurallara uymalısınız. İşte Java'da değişken tanımlama kuralları:
+- Değişken Adı: Değişken adları harfle veya alt çizgi ( _ ) ile başlamalıdır.
+Sadece ingilizce karakter **(alfabe)** kullanılmalıdır.
+İlk karakter harf, alt çizgi ( _ ) olabilir veya özel karakterlerden $ 
+kullanılabilir. Ardından harf, rakam veya alt çizgi ( _ ) kullanılabilir.
+**Diğer karakterler de
+  bazı yöntemler ile destekleniyor. Fakat ingilizce karakter dışındakiler önerilmez.**
+Örnek geçerli değişken adları:
+  - 'sayi'
+  - '_yeniDegisken'
+  - '$_myVariable'
+  - 'musteriAdi123'
 ## Operatorler
 ### Aritmetik Operatörler
 
@@ -143,7 +172,7 @@ Aritmetik operatörler, aşağıdakileri gerçekleştirmek için kullanılır:
 - Modül: (%)
 
 ```java
-public static void main(String args[]){
+public static void main(String[] args){
     int a = 10;
     int b = 20;
 
@@ -159,7 +188,25 @@ public static void main(String args[]){
     System.out.println("Kalan :" + mod);
 }
 ```
-
+### Atama Operatörleri
+Bir değişkeni başka bir değişkene atamak veya bir değişkene bir veri atamak için kullanılır.
+Atama operatörleri aşağıdaki gibidir:
+- Eşittir: (=)
+- Artı Eşittir (+=)
+- Eksi Eşittir (-=)
+- Çarpı Eşittir (*=)
+- Bölü Eşittir (/=)
+```java
+public static void main(String[] args){
+    // Ve operatörü
+    int a = 10;
+    int b = 20;
+    a+=5; // a=a+5; ile aynıdır. Sonuç: 15
+    a-=b; // a=a-b; ile aynıdır. Sonuç: -5
+    a*=b; // a=a*b; ile aynıdır. Sonuç: -100
+    a/=b; // a=a/b; ile aynıdır. Sonuç: -5
+}
+```
 ### Mantıksal Operatörler
 
 Java'da mantıksal operatörler, iki veya daha fazla mantıksal ifadenin değerini karşılaştırmak için kullanılır.
@@ -169,8 +216,9 @@ Mantıksal operatörler, aşağıdakileri gerçekleştirmek için kullanılır:
 - Veya: (||)
 - Değil: (!)
 
+![](assets/truth-table.png)
 ```java
-public static void main(String args[]){
+public static void main(String[] args){
     // Ve operatörü
     int a = 10;
     int b = 20;
@@ -191,7 +239,7 @@ public static void main(String args[]){
 }
 ```
 
-### Karşılaştırma Operatörleri
+### İlişkisel Operatörleri
 Java'da karşılaştırma operatörleri, iki değeri karşılaştırmak için kullanılır. 
 
 Bu operatörler
@@ -203,7 +251,7 @@ Bu operatörler
 - Küçük eşittir (<=)
 
 ```java
-public static void main(String args[]){
+public static void main(String[] args){
     // Eşittir operatörü
     int a = 10;
     int b = 10;
@@ -241,8 +289,6 @@ public static void main(String args[]){
 ### Diğer Operatörler
 Java'da aritmetik ve mantıksal operatörlerin yanı sıra, aşağıdaki gibi diğer operatörler de bulunur:
 
-- Atama operatörleri: Değişkenlere değer atamak için kullanılır.
-- İlişkisel operatörler: Değişkenlerin veya ifadelerin değerlerini karşılaştırmak için kullanılır.
 - Bitsel operatörler: Sayıların bitlerini manipüle etmek için kullanılır.
 - Koşul operatörleri: Koşulları kontrol etmek için kullanılır.
 - Yazdırma operatörleri: Ekran çıktısı üretmek için kullanılır.
