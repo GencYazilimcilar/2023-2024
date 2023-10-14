@@ -88,7 +88,23 @@ public static void main(String args[]){
     System.out.println("Hello PAUGYT");
 }
 ```
-
+## Yorum Satırı
+Yorum satırları java derleyicisi tarafından okunmayan/işlenmeyen yazılardır. Bu da yazdığımız kodların yanlarına/üstlerine 
+o kod parçaları ile ilgili açıklamalar/bilgilendirmeler yazmamızı sağlar.
+Java da sıklıkla kullandığımız 2 adet yorum satırı işareti vardır bunlar:
+- //
+- /* */
+işaretleridir.
+- ```java
+  public static void main(String args[]){
+    System.out.println("Hello PAUGYT");
+    //Tek satırlık yorum satırı
+    /*
+      Çok satırlı 
+      yorum satırı
+    */
+  }
+  ```
 ## Veri Tipleri
 Veri tipi, bir değişkenin tutabileceği verinin türünü tanımlar. Veri tipleri, sayısal, karakter, metin ve mantıksal olmak üzere dört ana kategoriye ayrılır.
 
