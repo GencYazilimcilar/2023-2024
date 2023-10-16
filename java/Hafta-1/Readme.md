@@ -22,7 +22,7 @@
   - [Karşılaştırma Operatörleri](#karşılaştırma-operatörleri)
   - [Diğer Operatörler](#diğer-operatörler)
 
-### Java Kurulum Aşamaları
+## Java Kurulum Aşamaları
 - Jdk indirme:https://www.oracle.com/tr/java/technologies/downloads (Windows için x64 MSI Installer tavsiye)
 - Intellij Idea indirme: https://www.jetbrains.com/idea/download (30 gün ücretsiz/üyelik oluşturup öğrenci belgenizi gönderirseniz tamamen ücretsiz olucaktır)
 ## Yazılım Nedir?
