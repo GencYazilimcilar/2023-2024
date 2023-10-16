@@ -10,6 +10,7 @@
     - [Java'nın Platform Bağımsızlığı](#javanın-platform-bağımsızlığı)
     - [Java'nın Yüksek Verimliliği](#javanın-yüksek-verimliliği)
     - [Java'nın Çok İşlevliliği](#javanın-çok-i̇şlevliliği)
+  - [Javanın Avantajları ve Dezavantajları](#javanın-avantajları-ve-dezavantajları)
 - [İlk Java programı](#i̇lk-java-programı)
 - [Veri Tipleri](#veri-tipleri)
 - [Değişkenler](#değişkenler)
@@ -79,6 +80,20 @@ Java'nın çok işlevliliği, aşağıdaki faktörlere bağlıdır:
 - Java, nesne yönelimli bir dildir. Bu, programların nesnelerden oluştuğu anlamına gelir. Nesneler, veri ve işlevlerden oluşan birimleri temsil eder. Bu, Java kodunun yeniden kullanılabilirliğini ve esnekliğini artırır.
 - Java, platform bağımsızdır. Bu, Java kodunun herhangi bir platformda çalışabileceği anlamına gelir. Bu, Java kodunun farklı platformlar arasında taşınmasını kolaylaştırır.
 
+### Javanın Avantajları ve Dezavantajları
+Avantajlar:
+- Platform Bağımsızlık: Java, "Write Once, Run Anywhere" (Bir kere yaz, her yerde çalıştır) ilkesine dayanır. Bu, Java'nın farklı işletim sistemlerinde ve cihazlarda çalışabilmesini sağlar. Java uygulamaları, Java Sanal Makinesi (JVM) aracılığıyla çalıştığı için platform bağımsızdır.
+- Büyük Topluluk ve Kaynaklar: Java, büyük ve aktif bir geliştirici topluluğuna sahiptir. Bu, Java geliştiricilerinin sorunlarını çözmek için geniş bir kaynak havuzuna erişebilmelerini sağlar.
+- Güvenlik: Java, güvenlik odaklı bir dil olarak tasarlanmıştır. JVM, uygulamaların izole bir ortamda çalışmasını sağlar ve çeşitli güvenlik önlemlerini içerir.
+- Nesne Yönelimli Programlama (OOP): Java, nesne yönelimli programlamayı destekler, bu da kodun daha organize ve bakımı daha kolay olmasını sağlar.
+- Geniş Kütüphane Desteği: Java, zengin bir standart kütüphane sunar, bu da geliştiricilerin çeşitli görevleri kolayca gerçekleştirmelerini sağlar.
+- Yüksek Performans: Java uygulamaları, yüksek performanslı bir şekilde çalışabilen bir dil olup, çeşitli optimizasyon tekniklerini içerir.
+Dezavantajlar:
+- Daha Fazla Bellek Tüketimi: Java uygulamaları genellikle diğer dillere göre daha fazla bellek tüketir. Bu, özellikle sınırlı kaynaklara sahip cihazlarda önemli bir dezavantaj olabilir.
+- Başlatma Zamanı Gecikmeleri: Java uygulamaları, JVM'nin başlatılma süreci nedeniyle daha uzun başlatma sürelerine sahip olabilir.
+- Hız Sorunları: Java, bazı durumlarda C/C++ gibi dillere kıyasla daha düşük işlemci hızına sahip olabilir. Ancak modern JVM'ler ve derleyiciler bu farkı azaltmıştır.
+- Doğrudan Donanım Erişimi Sorunları: Java, doğrudan donanım erişimi konusunda bazı kısıtlamalara sahiptir. Bu nedenle, düşük seviyeli işlemler gerektiren uygulamalarda dezavantajlı olabilir.
+- Karmaşıklık: Java bazen gereksiz karmaşıklık yaratabilir, özellikle yeni başlayanlar için öğrenmesi ve kullanması zor olabilir.
 ## İlk Java programı
 
 ```java
