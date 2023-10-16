@@ -1,6 +1,7 @@
 ![](assets/banner.png)
 # Hafta 1
 # İçindekiler
+- [Java Kurulum Aşamaları](#java-kurulum-aşamaları)
 - [Yazılım Nedir?](#yazılım-nedir)
 - [Java Nedir?](#java-nedir)
   - [Java Nasıl Çalışır?](#java-nasıl-çalışır)
@@ -9,7 +10,6 @@
     - [Java'nın Platform Bağımsızlığı](#javanın-platform-bağımsızlığı)
     - [Java'nın Yüksek Verimliliği](#javanın-yüksek-verimliliği)
     - [Java'nın Çok İşlevliliği](#javanın-çok-i̇şlevliliği)
-- [Java Kurulum Aşamaları](#java-kurulum-aşamaları)
 - [İlk Java programı](#i̇lk-java-programı)
 - [Veri Tipleri](#veri-tipleri)
 - [Değişkenler](#değişkenler)
@@ -21,7 +21,10 @@
   - [İlişkisel Operatörler](#ilişkisel-operatörler)
   - [Karşılaştırma Operatörleri](#karşılaştırma-operatörleri)
   - [Diğer Operatörler](#diğer-operatörler)
-  
+
+### Java Kurulum Aşamaları
+- Jdk indirme:https://www.oracle.com/tr/java/technologies/downloads (Windows için x64 MSI Installer tavsiye)
+- Intellij Idea indirme: https://www.jetbrains.com/idea/download (30 gün ücretsiz/üyelik oluşturup öğrenci belgenizi gönderirseniz tamamen ücretsiz olucaktır)
 ## Yazılım Nedir?
 Yazılım, bilgisayarların ve diğer elektronik cihazların çalışmasını sağlayan programların ve verilerin tümüdür. Yazılım, bilgisayar donanımının nasıl kullanılacağını ve belirli görevleri nasıl yerine getireceğini belirler.
 ## Java Nedir?
@@ -76,10 +79,6 @@ Java'nın çok işlevliliği, aşağıdaki faktörlere bağlıdır:
 
 - Java, nesne yönelimli bir dildir. Bu, programların nesnelerden oluştuğu anlamına gelir. Nesneler, veri ve işlevlerden oluşan birimleri temsil eder. Bu, Java kodunun yeniden kullanılabilirliğini ve esnekliğini artırır.
 - Java, platform bağımsızdır. Bu, Java kodunun herhangi bir platformda çalışabileceği anlamına gelir. Bu, Java kodunun farklı platformlar arasında taşınmasını kolaylaştırır.
-
-### Java Kurulum Aşamaları
-- Jdk indirme:https://www.oracle.com/tr/java/technologies/downloads (Windows için x64 MSI Installer tavsiye)
-- Intellij Idea indirme: https://www.jetbrains.com/idea/download (30 gün ücretsiz/üyelik oluşturup öğrenci belgenizi gönderirseniz tamamen ücretsiz olucaktır)
 
 ## İlk Java programı
 
