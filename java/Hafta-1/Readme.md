@@ -1,7 +1,7 @@
 ![](assets/banner.png)
 # Hafta 1
 # İçindekiler
-- [Java Kurulum Aşamaları](#java-kurulum-aşamaları)
+- [Java İçin Kurulumlar](#java-için-kurulumlar)
 - [Yazılım Nedir?](#yazılım-nedir)
 - [Java Nedir?](#java-nedir)
   - [Java Nasıl Çalışır?](#java-nasıl-çalışır)
@@ -22,7 +22,7 @@
   - [Karşılaştırma Operatörleri](#karşılaştırma-operatörleri)
   - [Diğer Operatörler](#diğer-operatörler)
 
-## Java Kurulum Aşamaları
+## Java İçin Kurulumlar
 - Jdk indirme:https://www.oracle.com/tr/java/technologies/downloads (Windows için x64 MSI Installer tavsiye)
 - Intellij Idea indirme: https://www.jetbrains.com/idea/download (30 gün ücretsiz/üyelik oluşturup öğrenci belgenizi gönderirseniz tamamen ücretsiz olucaktır)
 ## Yazılım Nedir?
