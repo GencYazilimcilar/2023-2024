@@ -18,8 +18,7 @@
 - [Operatorler](#operatorler)
   - [Aritmetik Operatörler](#aritmetik-operatörler)
   - [Atama Operatörleri](#atama-operatörleri)
-  - [İlişkisel Operatörler](#ilişkisel-operatörler)
-  - [Karşılaştırma Operatörleri](#karşılaştırma-operatörleri)
+  - [Ilişkisel Operatörler](#ilişkisel-operatörler)
   - [Diğer Operatörler](#diğer-operatörler)
 
 ## Java Için Kurulumlar
@@ -238,7 +237,7 @@ public static void main(String[] args){
 }
 ```
 
-### İlişkisel Operatörleri
+### Ilişkisel Operatörler
 Java'da karşılaştırma operatörleri, iki değeri karşılaştırmak için kullanılır. 
 
 Bu operatörler
