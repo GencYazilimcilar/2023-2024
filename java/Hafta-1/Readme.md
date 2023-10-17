@@ -21,7 +21,15 @@
   - [Atama Operatörleri](#atama-operatörleri)
   - [Ilişkisel Operatörler](#ilişkisel-operatörler)
   - [Diğer Operatörler](#diğer-operatörler)
-
+- [Strings](#strings)
+  - [String Length](#string-length) 
+  - [String UpperCase ve LoverCase](#string-upperCase-ve-loverCase)
+  - [String Bir Karakter Veya Kelime Bulma](#string-bir-karakter-veya-kelime-bulma)
+  - [String Concatenation](#string-concatenation)
+  - [String Substring](#string-substring)
+  - [String Karşılaştırma](#string-karşılaştırma)
+  - [String Trim](#string-trim)
+- [Javada Tip Dönüşümü](#javada-tip-dönüşümü)
 ## Java Için Kurulumlar
 - Jdk indirme:https://www.oracle.com/tr/java/technologies/downloads (Windows için x64 MSI Installer tavsiye)
 - Intellij Idea indirme: https://www.jetbrains.com/idea/download (30 gün ücretsiz/üyelik oluşturup öğrenci belgenizi gönderirseniz tamamen ücretsiz olucaktır)
@@ -128,13 +136,15 @@ Veri tipi, bir değişkenin tutabileceği verinin türünü tanımlar. Veri tipl
 - Metin veri tipi, bir veya daha fazla karakterden oluşan bir metni temsil eder. Örneğin, String gibi veri tipi metin veri tipidir.
 - Mantıksal veri tipi, doğru veya yanlış değerini temsil eder. Örneğin, boolean gibi veri tipi mantıksal veri tipidir.
 
-![Veri Tipleri ve Değişkenler](assets/ders-1-variables.webp)
+![Veri Tipleri ve Değişkenler](assets/variables.webp)
 
 ## Değişkenler
 
 Değişken, bir programda saklanan bir veriyi temsil eden bir isimdir. Değişkenler, veri tipine göre farklı değerler tutabilir.
 ```java
 public static void main(String[] args){
+    byte a=1; 
+    short b=1;
     int x = 5; // Bir tamsayı değişkeni.
     String gyt = "Genc Yazilimcilar Toplulugu"; // Bir Metinsel değişken.
     char karakter = 'g'; // Bir karakter değişkeni.
@@ -306,3 +316,116 @@ Java'da aritmetik ve mantıksal operatörlerin yanı sıra, aşağıdaki gibi di
 - Koşul operatörleri: Koşulları kontrol etmek için kullanılır.
 - Yazdırma operatörleri: Ekran çıktısı üretmek için kullanılır.
 - Diğer operatörler: Java dilinde kullanılan diğer operatörler.
+
+## Kaçış Karakterleri
+Kaçış karakterleri javada bir string hazırlarken kullandığımız bazı
+elemanlardır. Bunlar:
+```
+\b --> Önceki karakteri silmeye yarar
+\t --> Tab
+\r --> Satır başı yapar
+\n --> Satır atlar
+\" --> Çift tırnak
+\’ --> Tek tırnak
+\\ --> Backslash 
+```
+Bildiğiniz üzere javada bir string hazırlarken çift tırnaklar
+arasında stringimizi yazıyoruz. Fakat bu stringin içerisinde
+çift tırnak kullanmak istersek yada yazdığımız metinde bir yerde
+alt satıra inmek istersek vb. durumlarda bunları kaçış karakterleri
+olmadan yapamayız.
+
+**Örnek kullanımlar:**
+```java
+public static void main(String[] args){
+  String tab="Bir tab\tboşluklu.";
+  String altSatir="Uzun bir metin.\nAlt satırdayız artık.";
+  String ciftTirnak="Cift tirnak:\"";
+  System.out.println(tab);
+  System.out.println("**************");
+  System.out.println(altSatir);
+  System.out.println("**************");
+  System.out.println(ciftTirnak);
+}
+```
+## Strings
+Bu başlık altında javadaki string'ler için hazır bazı özellikleri
+inceleyeceğiz.
+
+### String Length
+Bir stringin uzunluğunu bulmamıza yarar.
+```java
+String txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+System.out.println("Stringin uzunluğu: " + txt.length()); // Output:26
+```
+### String UpperCase ve LowerCase
+Bir stringin tamamını büyük yada küçük harfe çevirmemize yarar.
+```java
+String txt = "Merhaba PAU GYT";
+System.out.println(txt.toUpperCase());   // Output:"MERHABA PAU GYT"
+System.out.println(txt.toLowerCase());   // Output:"merhaba pau gyt"
+```
+### String Bir Karakter Veya Kelime Bulma
+Bir string'te bir karakteri bulmamıza yarayan fonksiyon:
+```java
+String txt = "Bu bir örnek metindir. Bu metin içinde arama yapacağız.";
+String search="metin";
+System.out.println(txt.indexOf(search));// Output:13
+System.out.println(txt.indexOf("p")); // Output:47
+System.out.println(txt.indexOf("pau"));// Output:-1 kelimeyi bulamaz ise -1 sonucu verir
+```
+### String Concatenation
+Bir string'i birleştirme işlemi yapamızı sağlar.
+```java
+String firstString = "PAU";
+String secondString = "GYT";
+System.out.println(firstString + " " + secondString); // Output:PAU GYT
+System.out.println(firstString.concat(secondString)); // Output:PAUGYT
+```
+### String Substring
+Bir stringin içerisinden daha küçük bir string alma işlemidir.
+```java
+String myString="Merhaba PAU GYT";
+String sub=myString.substring(0,7); //Burada 0 dahil 7 dahil değildir
+System.out.println(sub); // Outpus:Merhaba
+```
+### String Karşılaştırma
+```java
+String myString = "Merhaba Pau Gyt";
+System.out.println(myString.equals("merhaba PAU GYT")); // Output:false çünkü java büyük küçük harfe duyarlıdır.
+System.out.println(myString.equalsIgnoreCase("merhaba pau gyt")); // Output:true çünkü equalsIgnoreCase ifadesi büyük/küçük harf duyarsızdır. 
+```
+### String Trim
+Trim ifadesi bir stringteki boşlukları silmemize yarar.
+```java
+String myString="   Merhaba PAU GYT    ";
+System.out.println(myString);// Output:   Merhaba PAU GYT    
+System.out.println(myString.trim());// Output:Merhaba PAU GYT
+```
+**Aşağıdaki kodun çıktısı nedir?**
+```
+int x=10;
+String y="20";
+System.out.println(x+y);
+```
+Burada devreye tip dönüşümü dediğimiz kavram giriyor. Javada 
+bir veri tipini başka bir veri tipine çevirme işlemi çok
+basittir. Sadece bu hususta dikkat etmemiz gereken bir önemli
+nokta vardır. **Bu husus daha büyük bir veri tipini daha küçük 
+bir veri tipine dönüştürürsek veri kaybı yaşanabilir.**
+### Javada Tip Dönüşümü
+Javada tip dönüşümü bir veri türünü başka bir veri türüne dönüştürme 
+işlemidir. Burada iki farklı yol vardır. Bunlar:
+- **Manual Cast:** Daha büyük bir veri tipinden daha küçük veri 
+tipine cast işlemi yapmak için değişkenin önüne parantez içerisinde 
+yeni veri tipini yapmaktır. Bu hususta veri kaybı yaşanabilir. Mesela
+double gibi ondalıklı bir sayıyı int veri türüne cast yaparsak, ondalıklı
+veri değerini kaybederiz. 
+- **Automatic Cast:** Küçük bir veri türünden daha büyük bir veri türüne
+cast yaparken ekstra efor harcamadan bu işlemi javanın kendinisin yapmasıdır.
+```java
+double value = 9.78;
+int intValue = (int) myDouble; // Manual casting
+double myDouble = 9;
+int myInt = myDouble; // Automatic casting
+```
