@@ -1,9 +1,18 @@
 ![](assets/banner.png)
-# Hafta 2
+# Hafta 3
 # İçindekiler
 - [Array](#array)
 - [Nesne Yönelimli Programlama (OOP)](#nesneyönelimli-programlama-oop)
-  -[Nesne(Object) Nedir?](#nesne-object-nedir) 
+  - [Nesne (Object) Nedir?](#nesne-object-nedir)
+  - [Sınıf (Class) Nedir?](#sınıf-class-nedir)
+  - [Odev](#odev)
+  - [Constructer Nedir?](#constructer-nedir)
+  - [This Nedir?](#this-nedir)
+  - [Modifiers Nedir?](#modifiers-nedir)
+    - [Access Modifiers](#access-modifiers)
+  - [Encapsulation](#encapsulation)
+    - [Odev 2](#odev-2)
+    - [Odev 2 Cozum](#odev-2-cozum)
 # Array
 Diziler/Array, Java'da aynı türden verileri içeren veri yapılarıdır.
 Bu sayede aynı türde olan birden fazla veriyi tek bir değişken
@@ -163,4 +172,206 @@ Park sensörü, oto pilot, hız sabitleme gibi arabaların kendilerine
 özel davranışları da olabilir. Bir araba üretilirken, bir 
 yapım kılavuzuna ihtiyaç vardır. Programlama da bu kılavuzlara 
 "Sınıf (Class)" denir.
+
 ![](assets/car.png)
+
+Hadi birlikte ilk class'ımızı oluşturalım.
+```java
+public class Car{
+    public String carName;
+    public void printName(){
+        System.out.println(carName);
+    }
+}
+```
+Bu class tan bir nesne oluşturup onu kullanmak için:
+```java
+Car bmw=new Car();
+bmw.carName="BMW";
+bmw.printName();
+```
+### Odev
+İçerisinde aracın:
+- name (String)
+- model (String)
+- productionYear (short)
+- price (double)
+- discount (float)
+
+değişkenlerine sahip,
+- calculateAge(), Aracın yaşını hesaplayıp geriye döner 
+- calculatePrice(), Aracın indirimli fiyatını hesaplayıp geriye döner
+
+fonskiyonlarına sahip bir **Car** sınıfı tanımlayınız.
+### Constructer Nedir?
+Constructer bir class new'lendiğinde ilk çalışan yapıdır. Bu
+sayede sınıfımızın özelliklerini sonradan girmek yerine bu yapı
+ile verebiliriz.
+
+Constructer tanımı, class'ın içerisinde class ile aynı isimde olan 
+bir fonksiyondur. Normal bir fonksiyonda ki gibi contructer da 
+parametreli veya parametresiz olabilir. Yukarıdaki Car örneğimiz
+için bir constructer tanımlayalım ve carName i constructer ile atayalım:
+```java
+public class Car{
+    public String carName;
+    public Car(String name){
+        carName=name;
+    }
+}
+```
+**Kullanım:**
+```java
+Car bmw=new Car("bmw");
+```
+Burda da gördüğünüz üzere constructer yapısının normal bir fonksiyon
+tanımı ve kullanımından pek bir farkı yoktur.
+### This Nedir?
+This keywordü, bulunduğu sınıfı temsil eden bir keyworddür. Bu
+keyword sayesinde sınıfımızdaki herhangi bir fonksiyondaki parametre
+olarak ifade ettiğimiz değişken ismi ile sınıftaki değişken ismini
+ayırmamıza yarar.
+```java
+public class Car{
+    public String carName;
+    public Car(String carName){
+        this.carName=carName;
+        //this.carName sınıfımızdaki değişken
+        //carName fonksiyonumuzun değişkeni
+    }
+}
+```
+**Not: Bir değişken sadece tanımlandığı süslü parantezler({}) içerisinde yaşar.**
+### Modifiers Nedir?
+Javada modifiers: sınıflar, değişkenler, metotlar ve diğer Java 
+bileşenlerinin erişim düzeyini, görünürlüğünü ve davranışını belirlemek
+için kullanılan özel anahtar kelimelerdir. 
+#### Access Modifiers
+Erişilebilirlik özellikleri için.
+
+| Modifier | Description                                                                                                                 |
+|----------|-----------------------------------------------------------------------------------------------------------------------------|
+| public | Herhangi bir sınıf veya paketten erişilebilir.                                                                              |
+| private | Koda sadece tanımlandığı sınıftan erişebilir.                                                                               |
+| protected | Koda sadece aynı paketten veya alt sınıftan erişilebilir. Alt sınıf kavramını Inheritance konusunda daha detaylı göreceğiz. |
+Örnek:
+```java
+public class Car{
+    private String carName;
+    public Car(String carName){
+        this.carName=carName;
+    }
+}
+```
+```java
+Car bmw=new Car("BMW");
+String carName=car.carName; // Burada java bize carName e ulaşamadığını söyleyecektir.
+```
+Yukarıdaki örnekte carName değişkenini **private** olarak tanımladığımız 
+için **Main class'ımızda** java car.carName ifadesi ile carName e ulaşmamızı engelleyecektir.
+
+### Encapsulation
+Encapsulation, nesne yönelimli programlamanın temel prensiplerinden 
+biridir ve verilerin gizlenmesini ve sınıfın iç yapısının dış 
+dünyaya karşı korunmasını sağlar. Java'da encapsulation, sınıf 
+içinde veri alanlarının özel (private) olarak işaretlenmesi ve 
+bu verilere erişmek için get ve set metotlarının kullanılmasıyla 
+gerçekleştirilir. Encapsulation'ın temel amacı, veriye doğrudan 
+erişim yerine sınıfın iç yapısının kontrolünü sağlayarak sınıfın 
+daha güvenli ve sürdürülebilir olmasını sağlamaktır.
+
+Basitce encapsulation uygulaması:
+```java
+public class Car{
+  private String carName;
+  public String getCarName(){
+    return carName;
+  }
+  public void setCarName(String carName){
+    this.carName=carName;
+  }
+}
+```
+Eğerki car sınıfının değişkenine değer atamak yada ulaşmak istersek artık bu fonksiyonlar
+aracılığı ile bunu yapacağız.
+```java
+Car bmw=new Car();
+bmw.setCarName("BMW");
+System.out.println(bmw.getCarName());
+```
+#### Odev 2
+Car class'ımızı ele alıcak olursak;
+- name ve model değişkenlerine içi boş bir string verilmemeli
+- productionYear değişkenine 1886 dan düşük, 2023 den büyük bir değer verilmemeli
+- price alanı 0 dan küçük değer almamalı 
+- indirim oranıda 0-100 aralığında olmalı
+
+Eğerki encapsulation yapmaz isek bir kullanıcı car sınıfımızdaki 
+bu değişkenlere yukarıdaki gibi istemediğimiz değerler verebilir.
+Ödev olarak verdiğimiz car class ını yukarıdaki kurallar ışığında düzenleyelim.
+
+#### Odev 2 Cozum
+```java
+public class Car{
+    private String carName;
+    private String model;
+    private short productionYear;
+    private double price;
+    private float discount;
+
+    public String getCarName() {
+      return carName;
+    }
+  
+    public void setCarName(String carName) {
+      if(carName != null && !carName.isEmpty()){
+        this.carName=carName;
+      }
+    }
+  
+    public String getModel() {
+      return model;
+    }
+  
+    public void setModel(String model) {
+      if(model!=null && !model.isEmpty()){
+        this.model = model;
+      }
+    }
+  
+    public short getProductionYear() {
+      return productionYear;
+    }
+  
+    public void setProductionYear(short productionYear) {
+      if(productionYear>1886 && productionYear<=2023){
+        this.productionYear = productionYear;
+      }
+    }
+  
+    public double getPrice() {
+      return price;
+    }
+  
+    public void setPrice(double price) {
+      if(price>0){
+        this.price = price;
+      }
+    }
+  
+    public float getDiscount() {
+      return discount;
+    }
+  
+    public void setDiscount(float discount) {
+      if(discount>0 && discount <=100){
+        this.discount = discount;
+      }
+    }
+}
+```
+```java
+Car bmw=new Car();
+bmw.setCarName("BMW");
+System.out.println(bmw.getCarName());
+```
