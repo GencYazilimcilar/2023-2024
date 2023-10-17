@@ -255,6 +255,7 @@ Erişilebilirlik özellikleri için.
 | private   | Koda sadece tanımlandığı sınıftan erişebilir.                                                                               |
 | protected | Koda sadece aynı paketten veya alt sınıftan erişilebilir. Alt sınıf kavramını Inheritance konusunda daha detaylı göreceğiz. |
 | default | Koda sadece aynı classtan veya aynı paketten erişilebilir.                                                                  |
+
 ![](assets/Access-Modifiers.png)
 Default modifierini erişim belirteci hiç vermediğimiz zamanlar
 otamatik olarak kullanırız.
