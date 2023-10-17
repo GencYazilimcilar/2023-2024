@@ -249,11 +249,27 @@ için kullanılan özel anahtar kelimelerdir.
 #### Access Modifiers
 Erişilebilirlik özellikleri için.
 
-| Modifier | Description                                                                                                                 |
-|----------|-----------------------------------------------------------------------------------------------------------------------------|
-| public | Herhangi bir sınıf veya paketten erişilebilir.                                                                              |
-| private | Koda sadece tanımlandığı sınıftan erişebilir.                                                                               |
+| Modifier  | Description                                                                                                                 |
+|-----------|-----------------------------------------------------------------------------------------------------------------------------|
+| public    | Herhangi bir sınıf veya paketten erişilebilir.                                                                              |
+| private   | Koda sadece tanımlandığı sınıftan erişebilir.                                                                               |
 | protected | Koda sadece aynı paketten veya alt sınıftan erişilebilir. Alt sınıf kavramını Inheritance konusunda daha detaylı göreceğiz. |
+| default | Koda sadece aynı classtan veya aynı paketten erişilebilir.                                                                  |
+![](assets/Access-Modifiers.png)
+Default modifierini erişim belirteci hiç vermediğimiz zamanlar
+otamatik olarak kullanırız.
+```java
+class Car{
+  ...
+}
+```
+Yukarıdaki şekilde class tanımı yapar isek, bu class a sadece aynı paket içerisinden 
+erişebiliriz.
+```
+byte a=5;
+```
+Yukarıdaki değişkeni bir sınıf içerisinde bu şekilde tanımlar isek, bu class'ı new'ledikten
+sonra bu değişkene sadece aynı class,aynı package ten erişilebilir.
 Örnek:
 ```java
 public class Car{
