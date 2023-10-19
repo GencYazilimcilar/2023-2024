@@ -6,7 +6,7 @@
   - [Nesne (Object) Nedir?](#nesne-object-nedir)
   - [Sınıf (Class) Nedir?](#sınıf-class-nedir)
   - [Odev](#odev)
-  - [Constructer Nedir?](#constructer-nedir)
+  - [Constructor Nedir?](#Constructor-nedir)
   - [This Nedir?](#this-nedir)
   - [Modifiers Nedir?](#modifiers-nedir)
     - [Access Modifiers](#access-modifiers)
@@ -135,30 +135,39 @@ kullanılabilir uygulamalar oluşturmayı mümkün kılar.
 - OOP, yapıya daha sonradan yeni özellikler ekleyerek genişletilebilirlik sağlar.
 - OOP, problemleri gerçek hayattaki işlemlere göre modeller.
 ## Nesne (Object) Nedir?
-Nesne kelimesinin TDK'de ki tanımına bir bakalım :
-1. isim Belli bir ağırlığı ve hacmi, rengi olan her türlü cansız varlık, şey, obje.
-2. isim, dil bilgisi Geçişli fiili bütünleyen yalın veya belirtme durumunda bulunan 
-tümleç: Ali bir kitap almış cümlesinde kitap nesnedir.
+Nesne, gerçek hayattaki varlıkları ve kavramları 
+temsil etmek için kullanılan temel bir kavramdır. 
+Her nesnenin kendine özgü nitelikleri (özellikleri) 
+ve davranışları (eylemleri) vardır. Bu, nesnelerin 
+kendilerine ait kimliklerini ve özelliklerini taşıdığı
+anlamına gelir.
 
-Bildiğimiz gibi her nesnenin kendine ait nitelikleri ve 
-davranışları vardır. Nesneler birbirlerinden farklıdır ve 
-kendi varoluşlarına göre davranırlar ve kendi kimliklerine 
-sahiptirler.
+**Nitelik (Özellik):** Bir nesnenin özellikleri, o 
+nesnenin mevcut durumunu tanımlar. Örneğin, bir 
+"Araba" nesnesinin rengi, markası, modeli, hızı ve 
+yakıt tüketimi gibi nitelikleri olabilir. Her araba 
+farklı bir renkte olabilir ve farklı bir markaya sahip 
+olabilir. Bu nitelikler, arabalar arasındaki farkları 
+tanımlar.
 
-**Nitelik :** Nitelik kavramı, bir nesnenin özellikleridir ve 
-nesnenin mevcut durumunu tanımlar. Mesela bir ördeğin rengi ve 
-ağırlığı o ördeğin nitelikleridir. Bir ördeğimizin rengi siyah, 
-diğer ördeğimizin rengi beyazdır. Bu durumda her iki nesne 
-(yani ördek) nitelikleri sebebi ile birbirilerinden 
-bağımsızdırlar.
+**Davranış (Eylem):** Bir nesnenin davranışları, o 
+nesnenin yapabileceği eylemleri temsil eder. Örneğin, 
+bir "Köpek" nesnesinin havlamak, koşmak, yemek yemek 
+gibi davranışları olabilir. Her tür köpek, bu davranışları 
+farklı şekillerde sergileyebilir.
 
-**Davranış :** Bir nesnenin kendine özel yaptığı eylemlerdir. 
-Yine ördek örneğine bakarsak, bir ördek uçabiliyorken diğer 
-bir ördek fiziksel durumu gereği uçamayabilir.
+Nesneler aynı zamanda isimlendirilmiş varlıklardır. 
+İsimleri, programlarımızda bu nesnelere erişmek ve 
+onlarla etkileşimde bulunmak için kullanılır. Örneğin, 
+"myCar" adlı bir nesne, bir arabanın temsilini yapabilir
+ve bu nesne üzerinden arabayla ilgili işlemler 
+gerçekleştirilebilir.
 
-Nesneler hakkında bilmemiz gereken bir diğer husus ise, nesneler
-bir isimdir. Nesnelerin kendilerine ait nitelik ve davranışları
-vardır.
+Nesneler, OOP'nin temel taşlarıdır ve programlarımızı 
+gerçek dünyadaki varlıkları ve olayları modellemek 
+için kullanırız. Bu sayede karmaşıklığı basitleştirir, 
+kodun daha anlaşılır ve yönetilebilir olmasını sağlarız.
+
 ## Sınıf (Class) Nedir ?
 OOP sınıflar ve nesneler üzerine kurulmuştur, "Sınıflar" bir 
 problemi soyutlamak ve genelleştirmek için kullanılan yapılardır
@@ -203,15 +212,15 @@ değişkenlerine sahip,
 - calculatePrice(), Aracın indirimli fiyatını hesaplayıp geriye döner
 
 fonskiyonlarına sahip bir **Car** sınıfı tanımlayınız.
-### Constructer Nedir?
-Constructer bir class new'lendiğinde ilk çalışan yapıdır. Bu
+### Constructor Nedir?
+Constructor bir class new'lendiğinde ilk çalışan yapıdır. Bu
 sayede sınıfımızın özelliklerini sonradan girmek yerine bu yapı
 ile verebiliriz.
 
-Constructer tanımı, class'ın içerisinde class ile aynı isimde olan 
+Constructor tanımı, class'ın içerisinde class ile aynı isimde olan 
 bir fonksiyondur. Normal bir fonksiyonda ki gibi contructer da 
 parametreli veya parametresiz olabilir. Yukarıdaki Car örneğimiz
-için bir constructer tanımlayalım ve carName i constructer ile atayalım:
+için bir Constructor tanımlayalım ve carName i Constructor ile atayalım:
 ```java
 public class Car{
     public String carName;
@@ -224,10 +233,10 @@ public class Car{
 ```java
 Car bmw=new Car("bmw");
 ```
-Burda da gördüğünüz üzere constructer yapısının normal bir fonksiyon
+Burda da gördüğünüz üzere Constructor yapısının normal bir fonksiyon
 tanımı ve kullanımından pek bir farkı yoktur.
 ### This Nedir?
-This keywordü, bulunduğu sınıfı temsil eden bir keyworddür. Bu
+This keyword, bulunduğu sınıfı temsil eden bir keyword'dür. Bu
 keyword sayesinde sınıfımızdaki herhangi bir fonksiyondaki parametre
 olarak ifade ettiğimiz değişken ismi ile sınıftaki değişken ismini
 ayırmamıza yarar.

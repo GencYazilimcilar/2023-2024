@@ -1,28 +1,29 @@
 ![](assets/banner.png)
 # Hafta 2
 # İçindekiler
-- [Koşullu İfadeler](#koşullu-ifadeler)
-  - [İf/else if/else](#i%CC%87felse-ifelse)
+- [Koşullu İfadeler](#kosullu-ifadeler)
+  - [if/else if/else](#ifelse-ifelse)
   - [Switch-case](#switch-case)
-  - [Ternary Operatör](#ternary-operatör)
-- [Döngüler](#döngüler)
+  - [Ternary Operatör](#ternary-operator)
+- [Döngüler](#donguler)
   - [For](#for)
   - [While](#while)
   - [Do While](#do-while)
   - [Continue ve Break](#continue-ve-break)
 - [Fonksiyonlar](#fonksiyonlar)
   - [Parametresiz void fonksiyon](#parametresiz-void-fonksiyon)
-  - [Parametresiz geriye bir değer döndüren fonksiyon](#parametresiz-geriye-bir-değer-döndüren-fonksiyon)
+  - [Parametresiz geriye bir değer döndüren fonksiyon](#parametresiz-geriye-bir-deger-donduren-fonksiyon)
   - [Parametreli void fonksiyon](#parametreli-void-fonksiyon)
-  - [Parametreli geriye bir değer döndüren fonksiyon](#parametreli-geriye-bir-değer-döndüren-fonksiyon)
-  - [Params kullanımı](#params-kullanımı)
-## Koşullu İfadeler
+  - [Parametreli geriye bir değer döndüren fonksiyon](#parametreli-geriye-bir-deger-donduren-fonksiyon)
+  - [Params kullanımı](#params-kullanimi)
+- [Ev Ödevi](#ev-odevi)
+## Kosullu Ifadeler
 Java'da koşullu ifadeler, belirli bir koşulu kontrol ederek program akışınızı yönlendirmenizi sağlar. 
 Javada kullanılan koşullu ifadeler:
 - İf - else if - else yapısı 
 - Switch-case
 - Ternary (Üçlü) Operatör
-### İf/else if/else
+### if/else if/else
 ```java
 public static void main(String[] args){
     if(koşul){ //koşul doğru ise girer
@@ -86,7 +87,7 @@ public static void main(String[] args){
     }
 }
 ```
-### Ternary Operatör
+### Ternary Operator
 ```java
 public static void main(String[] args){
     String sonuc = (koşul) ? "Koşul doğru" : "Koşul yanlış";
@@ -100,7 +101,7 @@ public static void main(String[] args){
     System.out.println(sonuc);
 }
 ```
-## Döngüler
+## Donguler
 Java'da döngüler, belirli bir işlemi veya işlemleri tekrarlamak için kullanılır.
 - for
 - while
@@ -227,7 +228,7 @@ Bir metotdun tanımı:
         SayHello();
     }
 ```
-### Parametresiz geriye bir değer döndüren fonksiyon
+### Parametresiz geriye bir deger donduren fonksiyon
 ```java
     public static int GetValue(){
         return 10; //return keyword ü geriye bir şey döndürmek için kullanılır
@@ -246,7 +247,7 @@ Bir metotdun tanımı:
         Sum(5,12); // Parametreleri vererek çağrılır
     }
 ```
-### Parametreli geriye bir değer döndüren fonksiyon
+### Parametreli geriye bir deger donduren fonksiyon
 ```java
     public static int Sum(int a,int b){
         return a+b;
@@ -256,8 +257,10 @@ Bir metotdun tanımı:
         System.out.println(sum);
     }
 ```
-### Params kullanımı
+### Params kullanimi
 Eğerki bir fonksiyonda gelen parametrelerin sayısı belli değil ise kullanılır.
+Bu sayede fonksiyona gelicek olan aynı türden veriler için
+sürekli bir değişken belirtmemize gerk kalmaz.
 ```java
     public static int Sum(int... values){ // Gelen verilerin hepsi aynı tür olmalıdır.
         int sum = 0;
@@ -271,3 +274,20 @@ Eğerki bir fonksiyonda gelen parametrelerin sayısı belli değil ise kullanıl
         System.out.println(sum);
     }
 ```
+### Ev Odevi
+**Mersenne Asalları**
+Eğer asal bir sayının, (2^asal_sayı)-1 ide asal ise bu ikiliye
+Mersenne asalları diyoruz ve bunu kullanarak yeni mükemmel sayıları
+bulabiliriz. İlk asal sayımıza **asal_sayi**, (2^asal_sayı)-1 dan elde ettiğimiz
+asal sayıyada **asal_sayi2** dersek: 
+- Formül:(2^(asal_sayi-1))*(asal_sayi2-1)
+
+Bu formül ile elde ettiğimiz sayı mükemmel sayı olmalıdır.
+
+Ödevini **Mersenne Asallarını** kullanarak mükemmel sayılar bulmak.
+
+Ödevde ihtiyacınız olan yapılar:
+- Bir sayının asal olup olmadığını bulup true/false döndüren bir fonksiyon.
+- Mersenne asallarını bulup, bize bunlar ile mükemmel sayı üreticek bir fonksiyon. 
+**(Bu fonksiyonda 2 den başlayıp 500 de biten bir döngü kullanmanızı tavsiye ediyorum.
+Mersenne asallarını fonksiyon sürekli bulup, ekrana bu asallar ile üretilmiş mükemmel sayıları yazın.)**

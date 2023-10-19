@@ -1,6 +1,6 @@
 ![](assets/banner.png)
 # Hafta 1
-# İçindekiler
+## İçindekiler
 - [Java Için Kurulumlar](#java-için-kurulumlar)
 - [Yazılım Nedir?](#yazılım-nedir)
 - [Java Nedir?](#java-nedir)
@@ -31,8 +31,12 @@
   - [String Trim](#string-trim)
 - [Javada Tip Dönüşümü](#javada-tip-dönüşümü)
 ## Java Için Kurulumlar
-- Jdk indirme:https://www.oracle.com/tr/java/technologies/downloads (Windows için x64 MSI Installer tavsiye)
 - Intellij Idea indirme: https://www.jetbrains.com/idea/download (30 gün ücretsiz/üyelik oluşturup öğrenci belgenizi gönderirseniz tamamen ücretsiz olucaktır)
+- Intellij Idea kurulumunu yaptıktan sonra, IntellijIdea yı açıp 
+new project seçeneğinden sonra aşağıdaki adımları izleyiniz:
+![](assets/IntellijIdeaInstallJdk.png)
+![](assets/IntellijIdeaInstallJdk-2.png)
+- İndirmeyi yaptıktan sonra artık java yazmaya hazırsınız.
 ## Yazılım Nedir?
 Yazılım, bilgisayarların ve diğer elektronik cihazların çalışmasını sağlayan programların ve verilerin tümüdür. Yazılım, bilgisayar donanımının nasıl kullanılacağını ve belirli görevleri nasıl yerine getireceğini belirler.
 ## Java Nedir?
