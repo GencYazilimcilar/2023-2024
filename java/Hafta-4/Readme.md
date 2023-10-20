@@ -4,6 +4,7 @@
 - [Inheritance (Kalitim)](#inheritance-kalitim)
   - [Kalitimda Constructor Zinciri ve Super Anahtar Sozcugu](#kalitimda-constructor-zinciri-ve-super-anahtar-sozcugu) 
 - [Polymorphism (Cok Bicimlilik)](#polymorphism-cok-bicimlilik)
+- [Overloading (Aşırı Yükleme)](#overloading-asiri-yukleme)
 - [Odev](#odev)
 # Inheritance (Kalitim)
 Kalıtım, programlama ortamında da gerçek hayattaki tanımına benzer 
@@ -253,7 +254,94 @@ arac2.accelerate(); // "Motosiklet hızlanıyor."
 arac1.brake();      // "Araç fren yapıyor."
 arac2.brake();      // "Motosiklet fren yapıyor."
 ```
-## Odev
+
+# Overloading (Asiri Yukleme)
+Java'da "overloading" (aşırı yükleme), aynı isme sahip fakat farklı 
+parametre listeleriyle tanımlanmış birden fazla fonksiyonun veya metodun 
+aynı sınıf içinde bulunmasına denir. Overloading, metotların daha okunaklı 
+ve anlaşılabilir hale gelmesini sağlar ve aynı ismi taşıyan farklı işlevlere 
+sahip metotların kullanılmasını kolaylaştırır.
+
+Yukarıda yaptığımız product yapısını ele alıcak olursak örneğimiz:
+```java
+public class Product{
+    private String name; 
+    private double price;
+    public Product(){
+        name="Product";
+        price=5000;
+        /* Burada parametreli ve parametresiz aynı isimde iki fonksiyomuz
+        * (constructor'ımız) var. Bu sayede ben bir product oluştururken
+        * parametre göndermez isem bu fonksiyon çalışır
+        */
+    }
+    public Product(String name, double price) {
+        this.name = name;
+        this.price = price;
+    }
+
+    public void displayInfo() {
+        System.out.println("Product name: " + name);
+        System.out.println("Product Price: " + price + " TL");
+    }
+}
+public class Book extends Product {
+    private String author;
+    public Book(){
+        super();//parametresiz olanını kullandık
+        author="Default author";
+    }
+    public Book(String name, double price, String author) {
+        super(name, price);
+        this.author = author;
+    }
+
+    public void printAuthor() {
+        System.out.println("Author: " + author);
+    }
+}
+public class Electronics extends Product {
+    private String brand;
+
+    public Electronics(String name, double price, String brand) {
+        super(name, price);
+        this.brand = brand;
+    }
+
+    public void printBrand() {
+        System.out.println("Brand: " + brand);
+    }
+}
+```
+```java
+Book book = new Book();
+Electronics electronic = new Electronics("Akıllı Telefon", 12299.99, "Samsung");
+book.displayInfo();
+book.printAuthor();
+electronic.displayInfo();
+electronic.printBrand();
+```
+Başka bir örnek ise:
+```java
+public class Calculator {
+    public int sum(int a, int b) {
+        return a + b;
+    }
+    public double sum(double a, double b) {
+        return a + b;
+    }
+    public int sum(int a, int b, int c) {
+        return a + b + c;
+    }
+}
+```
+```java
+Calculator cal = new Calculator();
+int result=cal.sum(5,10); //iki adet int verdiğimizden caldaki 1. fonk çalışır
+double result2=cal.sum(5.8,45.9); //parametreleri double olan fonk çalışır
+int result3=cal.sum(5,9,7); //3 parametreli fonk çalışır
+```
+# Odev
 **Araç Sınıfı Oluşturma:**
 - Bir "Araç" sınıfı oluşturun. Bu sınıfın aşağıdaki özellikleri içermesi gerekiyor:
   - String türünde "marka" özelliği (örneğin, "Bmw", "Toyota" gibi).
