@@ -22,7 +22,7 @@
   - [Ilişkisel Operatörler](#ilişkisel-operatörler)
   - [Diğer Operatörler](#diğer-operatörler)
 - [Strings](#strings)
-  - [String Length](#string-length) 
+  - [String Length](#string-length)
   - [String UpperCase ve LoverCase](#string-upperCase-ve-loverCase)
   - [String Bir Karakter Veya Kelime Bulma](#string-bir-karakter-veya-kelime-bulma)
   - [String Concatenation](#string-concatenation)
@@ -32,11 +32,11 @@
 - [Javada Tip Dönüşümü](#javada-tip-dönüşümü)
 ## Java Için Kurulumlar
 - Intellij Idea indirme: https://www.jetbrains.com/idea/download (30 gün ücretsiz/üyelik oluşturup öğrenci belgenizi gönderirseniz tamamen ücretsiz olucaktır)
-- Intellij Idea kurulumunu yaptıktan sonra, IntellijIdea yı açıp 
+- Intellij Idea kurulumunu yaptıktan sonra, Intellij Idea'yı açıp
 new project seçeneğinden sonra aşağıdaki adımları izleyiniz:
 ![](assets/IntellijIdeaInstallJdk.png)
 ![](assets/IntellijIdeaInstallJdk-2.png)
-- İndirmeyi yaptıktan sonra artık java yazmaya hazırsınız.
+- İndirmeyi yaptıktan sonra artık Java yazmaya hazırsınız.
 ## Yazılım Nedir?
 Yazılım, bilgisayarların ve diğer elektronik cihazların çalışmasını sağlayan programların ve verilerin tümüdür. Yazılım, bilgisayar donanımının nasıl kullanılacağını ve belirli görevleri nasıl yerine getireceğini belirler.
 ## Java Nedir?
@@ -53,7 +53,7 @@ Java kodları, javac derleyicisi tarafından derlenir. Derleme işlemi, Java kod
 Derleme işlemi, aşağıdaki adımları içerir:
 - Kaynak kod, sözdizimsel ve anlamsal analize tabi tutulur. Bu aşamada, kaynak koddaki hatalar tespit edilir ve düzeltilir.
 - Kaynak kod, makine koduna dönüştürülür. Bu aşamada, Java kodundaki değişkenler, işlevler ve ifadeler makine koduna dönüştürülür.
-- Derlenmiş kod, bir .class dosyası olarak kaydedilir. .class dosyası, Java sanal makinesi tarafından çalıştırılabilir.
+- Derlenmiş kod, bir `.class` dosyası olarak kaydedilir. `.class` dosyası, Java sanal makinesi tarafından çalıştırılabilir.
 
 ![Derleme Aşaması Şeması](assets/ders-1-javac-compile.jpg)
 
@@ -62,7 +62,7 @@ Derlenmiş Java kodu, Java sanal makinesi (JVM) tarafından çalıştırılır. 
 
 JVM, derlenmiş Java kodunu aşağıdaki adımları izleyerek çalıştırır:
 
-- JVM, .class dosyasını yükler. Bu aşamada, JVM derlenmiş kodu belleğe yükler.
+- JVM, `.class` dosyasını yükler. Bu aşamada, JVM derlenmiş kodu belleğe yükler.
 - JVM, derlenmiş kodu yorumlar. Bu aşamada, JVM derlenmiş kodu makine koduna dönüştürür ve ardından makine kodunu çalıştırır.
 - JVM, derlenmiş kodun yürütülmesini tamamlar. Bu aşamada, JVM derlenmiş kodun yürütmesini tamamlar ve ardından kodun çıktısını üretir.
 
@@ -115,9 +115,9 @@ public static void main(String[] args){
 }
 ```
 ## Yorum Satırı
-Yorum satırları java derleyicisi tarafından okunmayan/işlenmeyen yazılardır. Bu da yazdığımız kodların yanlarına/üstlerine 
+Yorum satırları Java derleyicisi tarafından okunmayan/işlenmeyen yazılardır. Bu da yazdığımız kodların yanlarına/üstlerine
 o kod parçaları ile ilgili açıklamalar/bilgilendirmeler yazmamızı sağlar.
-Java da sıklıkla kullandığımız 2 adet yorum satırı işareti vardır bunlar:
+Java da sıklıkla kullandığımız 2 adet yorum satırı işareti vardır. Bunlar:
 - //
 - /* */
 işaretleridir.
@@ -126,7 +126,7 @@ işaretleridir.
     System.out.println("Hello PAUGYT");
     //Tek satırlık yorum satırı
     /*
-      Çok satırlı 
+      Çok satırlı
       yorum satırı
     */
   }
@@ -148,7 +148,7 @@ Veri tipi, bir değişkenin tutabileceği verinin türünü tanımlar. Veri tipl
 Değişken, bir programda saklanan bir veriyi temsil eden bir isimdir. Değişkenler, veri tipine göre farklı değerler tutabilir.
 ```java
 public static void main(String[] args){
-    byte a=1; 
+    byte a=1;
     short b=1;
     int x = 5; // Bir tamsayı değişkeni.
     String gyt = "Genc Yazilimcilar Toplulugu"; // Bir Metinsel değişken.
@@ -163,7 +163,7 @@ public static void main(String[] args){
 public static void main(String[] args){
     int x = 5;
     String gyt = "Genc Yazilimcilar Toplulugu";
-    char karakter = 'g'; 
+    char karakter = 'g';
     boolean yD = true;
     float kucukOndalikliSayi= 20.22
     double buyukOndalikliSayi= 20.222222222;
@@ -178,7 +178,7 @@ public static void main(String[] args){
 Java'da değişken tanımlarken belirli kurallara uymalısınız. İşte Java'da değişken tanımlama kuralları:
 - Değişken Adı: Değişken adları harfle veya alt çizgi ( _ ) ile başlamalıdır.
 Sadece ingilizce karakter **(alfabe)** kullanılmalıdır.
-İlk karakter harf, alt çizgi ( _ ) olabilir veya özel karakterlerden $ 
+İlk karakter harf, alt çizgi ( _ ) olabilir veya özel karakterlerden $
 kullanılabilir. Ardından harf, rakam veya alt çizgi ( _ ) kullanılabilir.
 **Diğer karakterler de
   bazı yöntemler ile destekleniyor. Fakat ingilizce karakter dışındakiler önerilmez.**
@@ -268,10 +268,10 @@ public static void main(String[] args){
 ```
 
 ### Ilişkisel Operatörler
-Java'da karşılaştırma operatörleri, iki değeri karşılaştırmak için kullanılır. 
+Java'da karşılaştırma operatörleri, iki değeri karşılaştırmak için kullanılır.
 
 Bu operatörler
-- Eşittir (==) 
+- Eşittir (==)
 - Eşit değildir (!=)
 - Büyüktür (>)
 - Küçüktür (<)
@@ -323,7 +323,7 @@ Java'da aritmetik ve mantıksal operatörlerin yanı sıra, aşağıdaki gibi di
 - Diğer operatörler: Java dilinde kullanılan diğer operatörler.
 
 ## Kaçış Karakterleri
-Kaçış karakterleri javada bir string hazırlarken kullandığımız bazı
+Kaçış karakterleri Javada bir string hazırlarken kullandığımız bazı
 elemanlardır. Bunlar:
 ```
 \b --> Önceki karakteri silmeye yarar
@@ -332,10 +332,10 @@ elemanlardır. Bunlar:
 \n --> Satır atlar
 \" --> Çift tırnak
 \’ --> Tek tırnak
-\\ --> Backslash 
+\\ --> Backslash
 ```
-Bildiğiniz üzere javada bir string hazırlarken çift tırnaklar
-arasında stringimizi yazıyoruz. Fakat bu stringin içerisinde
+Bildiğiniz üzere Javada bir string hazırlarken çift tırnaklar
+arasında("") stringimizi yazıyoruz. Fakat bu stringin içerisinde
 çift tırnak kullanmak istersek yada yazdığımız metinde bir yerde
 alt satıra inmek istersek vb. durumlarda bunları kaçış karakterleri
 olmadan yapamayız.
@@ -354,7 +354,7 @@ public static void main(String[] args){
 }
 ```
 ## Strings
-Bu başlık altında javadaki string'ler için hazır bazı özellikleri
+Bu başlık altında Javadaki string'ler için hazır bazı özellikleri
 inceleyeceğiz.
 
 ### String Length
@@ -398,13 +398,13 @@ System.out.println(sub); // Outpus:Merhaba
 ```java
 String myString = "Merhaba Pau Gyt";
 System.out.println(myString.equals("merhaba PAU GYT")); // Output:false çünkü java büyük küçük harfe duyarlıdır.
-System.out.println(myString.equalsIgnoreCase("merhaba pau gyt")); // Output:true çünkü equalsIgnoreCase ifadesi büyük/küçük harf duyarsızdır. 
+System.out.println(myString.equalsIgnoreCase("merhaba pau gyt")); // Output:true çünkü equalsIgnoreCase ifadesi büyük/küçük harf duyarsızdır.
 ```
 ### String Trim
 Trim ifadesi bir stringteki boşlukları silmemize yarar.
 ```java
 String myString="   Merhaba PAU GYT    ";
-System.out.println(myString);// Output:   Merhaba PAU GYT    
+System.out.println(myString);// Output:   Merhaba PAU GYT
 System.out.println(myString.trim());// Output:Merhaba PAU GYT
 ```
 **Aşağıdaki kodun çıktısı nedir?**
@@ -413,19 +413,19 @@ int x=10;
 String y="20";
 System.out.println(x+y);
 ```
-Burada devreye tip dönüşümü dediğimiz kavram giriyor. Javada 
+Burada devreye tip dönüşümü dediğimiz kavram giriyor. Javada
 bir veri tipini başka bir veri tipine çevirme işlemi çok
 basittir. Sadece bu hususta dikkat etmemiz gereken bir önemli
-nokta vardır. **Bu husus daha büyük bir veri tipini daha küçük 
+nokta vardır. **Bu husus daha büyük bir veri tipini daha küçük
 bir veri tipine dönüştürürsek veri kaybı yaşanabilir.**
 ### Javada Tip Dönüşümü
-Javada tip dönüşümü bir veri türünü başka bir veri türüne dönüştürme 
+Javada tip dönüşümü bir veri türünü başka bir veri türüne dönüştürme
 işlemidir. Burada iki farklı yol vardır. Bunlar:
-- **Manual Cast:** Daha büyük bir veri tipinden daha küçük veri 
-tipine cast işlemi yapmak için değişkenin önüne parantez içerisinde 
+- **Manual Cast:** Daha büyük bir veri tipinden daha küçük veri
+tipine cast işlemi yapmak için değişkenin önüne parantez içerisinde
 yeni veri tipini yapmaktır. Bu hususta veri kaybı yaşanabilir. Mesela
 double gibi ondalıklı bir sayıyı int veri türüne cast yaparsak, ondalıklı
-veri değerini kaybederiz. 
+veri değerini kaybederiz.
 - **Automatic Cast:** Küçük bir veri türünden daha büyük bir veri türüne
 cast yaparken ekstra efor harcamadan bu işlemi javanın kendinisin yapmasıdır.
 ```java
