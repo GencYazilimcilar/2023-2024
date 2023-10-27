@@ -257,7 +257,7 @@ public static void main(String[] args){
     int b = 20;
     boolean esitMi = (a == b);
     boolean buyukMu = (a > 10);
-    boolean veya = esitMi || buyukMu;
+    boolean veya = esitMi || buyukMu; //Or yapısı
     System.out.println(veya); // true
     // Değil operatörü
     int a = 10;
@@ -432,5 +432,5 @@ cast yaparken ekstra efor harcamadan bu işlemi javanın kendinisin yapmasıdır
 double value = 9.78;
 int intValue = (int) myDouble; // Manual casting
 double myDouble = 9;
-int myInt = myDouble; // Automatic casting
+double newValue=intValue; // Automatic casting
 ```
