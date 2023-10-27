@@ -18,9 +18,9 @@
   - [Params kullanımı](#params-kullanimi)
 - [Ev Ödevi](#ev-odevi)
 ## Kosullu Ifadeler
-Java'da koşullu ifadeler, belirli bir koşulu kontrol ederek program akışınızı yönlendirmenizi sağlar. 
+Java'da koşullu ifadeler, belirli bir koşulu kontrol ederek program akışınızı yönlendirmenizi sağlar.
 Javada kullanılan koşullu ifadeler:
-- İf - else if - else yapısı 
+- İf - else if - else yapısı
 - Switch-case
 - Ternary (Üçlü) Operatör
 ### if/else if/else
@@ -59,7 +59,7 @@ public static void main(String[] args){
 Yukarıda da görülüceği üzere else if yapısı birden fazla kez kullanılabilir.
 ```java
 public static void main(String[] args){
-    int a=10; 
+    int a=10;
     if(a>15){
         System.out.println("A 15 den büyük");
     }
@@ -74,7 +74,7 @@ public static void main(String[] args){
 ### Switch-case
 ```java
 public static void main(String[] args){
-    int a=10; 
+    int a=10;
     switch(a){ //değeri switch e verirsin
         case 5: // a 5 e eşitse girer
             System.out.println("A == 5");
@@ -83,7 +83,7 @@ public static void main(String[] args){
             System.out.println("A == 10");
             break; // case i bitirir. case ler istenildiği kadar yazılabilir.
         default: // yukarıdaki hiçbir case e girmez ise burası çalışır.
-            System.out.println("A hiçbir case de doğrulanmadı.");        
+            System.out.println("A hiçbir case de doğrulanmadı.");
     }
 }
 ```
@@ -96,12 +96,12 @@ public static void main(String[] args){
 
 ```java
 public static void main(String[] args){
-    int a=10; 
+    int a=10;
     String sonuc = (sayi < 10) ? "Sayı 10'dan küçüktür" : "Sayı 10'dan büyük yada eşittir.";
     System.out.println(sonuc);
 }
 ```
-## Donguler
+## Döngüler
 Java'da döngüler, belirli bir işlemi veya işlemleri tekrarlamak için kullanılır.
 - for
 - while
@@ -141,7 +141,7 @@ public static void main(String[] args){
     }
 ```
 ### Do-While
-Bu döngü türünün diğer ikisinden farkı; diğer döngü türlerinde önce koşul 
+Bu döngü türünün diğer ikisinden farkı; diğer döngü türlerinde önce koşul
 kontrol edilirken bu döngü türünde önce işlemler yapılır sonra koşul
 kontrol edilir.
 ```java
@@ -171,9 +171,9 @@ Bu durumda continue anahtar kelimesini kullanmamız gerekmektedir.
         while(i<10){
             if(i%2==0){
                 i++;
-                continue; 
+                continue;
                 /* Bu kod çalıştığında  aşağıdaki kodlar çalışmayacaktır
-                    ve tekrardan while de ki koşul kontrol edilicektir.  
+                    ve tekrardan while de ki koşul kontrol edilicektir.
                 */
             }
             System.out.println("Paü GYT - İterasyon " + i);
@@ -181,7 +181,7 @@ Bu durumda continue anahtar kelimesini kullanmamız gerekmektedir.
         }
     }
 ```
-- break: Bu keyword o anki döngüyü kırmaya yarar. Yani belirli bir durumda 
+- break: Bu keyword o anki döngüyü kırmaya yarar. Yani belirli bir durumda
 döngümüzü sonlandırmak istersek bu keywordü kullanabiliriz.
 ```java
     public static void main(String[] args){
@@ -203,7 +203,7 @@ temel yapı taşlarıdır. Fonksiyonlar, Java'da "metotlar" olarak adlandırıl�
 
 Bir metotdun tanımı:
 ```java
-    [erişim_belirleyici] [geri_dönüş_tipi] [metot_adı](parametreler) {
+    [erişim_belirleyici] [geri_dönüş_tipi] [metot_adı](parametre_listesi) {
         // Metotun işlevi
     }
 ```
@@ -279,7 +279,7 @@ sürekli bir değişken belirtmemize gerk kalmaz.
 Eğer asal bir sayının, (2^asal_sayı)-1 ide asal ise bu ikiliye
 Mersenne asalları diyoruz ve bunu kullanarak yeni mükemmel sayıları
 bulabiliriz. İlk asal sayımıza **asal_sayi**, (2^asal_sayı)-1 dan elde ettiğimiz
-asal sayıyada **asal_sayi2** dersek: 
+asal sayıyada **asal_sayi2** dersek:
 - Formül:(2^(asal_sayi-1))*(asal_sayi2-1)
 
 Bu formül ile elde ettiğimiz sayı mükemmel sayı olmalıdır.
@@ -288,6 +288,6 @@ Bu formül ile elde ettiğimiz sayı mükemmel sayı olmalıdır.
 
 Ödevde ihtiyacınız olan yapılar:
 - Bir sayının asal olup olmadığını bulup true/false döndüren bir fonksiyon.
-- Mersenne asallarını bulup, bize bunlar ile mükemmel sayı üreticek bir fonksiyon. 
+- Mersenne asallarını bulup, bize bunlar ile mükemmel sayı üreticek bir fonksiyon.
 **(Bu fonksiyonda 2 den başlayıp 500 de biten bir döngü kullanmanızı tavsiye ediyorum.
 Mersenne asallarını fonksiyon sürekli bulup, ekrana bu asallar ile üretilmiş mükemmel sayıları yazın.)**
