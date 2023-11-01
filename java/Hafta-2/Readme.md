@@ -16,7 +16,8 @@
   - [Parametreli void fonksiyon](#parametreli-void-fonksiyon)
   - [Parametreli geriye bir değer döndüren fonksiyon](#parametreli-geriye-bir-deger-donduren-fonksiyon)
   - [Params kullanımı](#params-kullanimi)
-- [Ev Ödevi](#ev-odevi)
+- [Sınıf Ödevi](#sinif-odevi)
+- [Ödev](#odev)
 ## Kosullu Ifadeler
 Java'da koşullu ifadeler, belirli bir koşulu kontrol ederek program akışınızı yönlendirmenizi sağlar.
 Javada kullanılan koşullu ifadeler:
@@ -274,17 +275,40 @@ sürekli bir değişken belirtmemize gerk kalmaz.
         System.out.println(sum);
     }
 ```
-### Ev Odevi
+## Sinif Odevi
+### Sinif Odevi 1
+- 1-10000 arasında kaç tane asal sayısı olduğunu bulan java kodunu yazınız.
+### Sinif Odevi 2
+Palindrom, tersten okunuşu da aynı olan cümle, sözcük ve sayılara denilmektedir.
+Örn:
+- 1001
+- 12321
+- ada
+- ata
+vb. gibi baştan sona ve sondan başa okunuşu/yazılışı aynı olan ifadelere denir.
+
+**Ödev:**
+- Palindromik sayiları: Bir sayının palindromik olup olmadığını true yada false ile bize bildiren
+fonksiyonu yazın.
+- Palindromik kelimeler: Bir stringin ifadenin olup palindromik olmadığını true yada false ile 
+bize bildiren fonksiyonu yazın.
+
+## Odev
 **Mersenne Asalları**
-Eğer asal bir sayının, (2^asal_sayı)-1 ide asal ise bu ikiliye
-Mersenne asalları diyoruz ve bunu kullanarak yeni mükemmel sayıları
-bulabiliriz. İlk asal sayımıza **asal_sayi**, (2^asal_sayı)-1 dan elde ettiğimiz
-asal sayıyada **asal_sayi2** dersek:
-- Formül:(2^(asal_sayi-1))*(asal_sayi2-1)
+
+**p** bir asal sayı olmak üzere 2<sup>p</sup>-1 şeklinde yazılabilen asal sayılara verilen isimdir. 
+Bir diğer deyişle Mersenne asalları, m=2<sup>p</sup>-1 olarak ifade edilebilen asallardır (yani 
+hem m hem p birer asal sayıdır). Bu yöntemle elde edilebilen ilk birkaç Mersenne asalı için 
+p asalı 2, 3, 5, 7, 13, 17, 19, 31, 61 ve 89'dur.
+
+Mersenne asallarını kullanarak yeni mükemmel sayıları
+bulabiliriz. İlk asal sayımıza **asal_sayi**, 2<sup>asal_sayi</sup>-1 dan elde ettiğimiz asal sayıyada 
+**asal_sayi2** dersek:
+- Formül:(2<sup>asal_sayi-1</sup>)*(asal_sayi2)
 
 Bu formül ile elde ettiğimiz sayı mükemmel sayı olmalıdır.
 
-Ödevini **Mersenne Asallarını** kullanarak mükemmel sayılar bulmak.
+Ödeviniz **Mersenne Asallarını** kullanarak mükemmel sayılar bulmak.
 
 Ödevde ihtiyacınız olan yapılar:
 - Bir sayının asal olup olmadığını bulup true/false döndüren bir fonksiyon.

@@ -5,6 +5,8 @@
   - [Kalitimda Constructor Zinciri ve Super Anahtar Sozcugu](#kalitimda-constructor-zinciri-ve-super-anahtar-sozcugu) 
 - [Polymorphism (Cok Bicimlilik)](#polymorphism-cok-bicimlilik)
 - [Overloading (Aşırı Yükleme)](#overloading-asiri-yukleme)
+- [Sınıf Ödevi 1](#sinif-odevi-1)
+- [Sınıf Ödevi 2](#sinif-odevi-2)
 - [Odev](#odev)
 # Inheritance (Kalitim)
 Kalıtım, programlama ortamında da gerçek hayattaki tanımına benzer 
@@ -341,6 +343,45 @@ int result=cal.sum(5,10); //iki adet int verdiğimizden caldaki 1. fonk çalış
 double result2=cal.sum(5.8,45.9); //parametreleri double olan fonk çalışır
 int result3=cal.sum(5,9,7); //3 parametreli fonk çalışır
 ```
+# Sinif Odevi 1
+Bir önceki örnekte oluşturulan Book ve Electronics sınıflarının toString() fonksiyonlarını **override**
+ediniz.
+# Sinif Odevi 2
+Java'da "Employee" adında fabrika çalışanlarını temsil eden ve metotları ile çalışanların maaşlarını hesaplayan bir sınıf yazmalısınız. Bu sınıf 4 nitelik ve 5 metoda sahip olacaktır.
+
+### Sınıfın Nitelikleri
+
+- name : Çalışanın adı ve soyadı
+- salary : Çalışanın maaşı
+- workHours : Haftalık çalışma saati
+- hireYear : İşe başlangıç yılı
+
+### Sınıfın Metotları
+
+- Employee(name,salary,workHours,hireYear) : Kurucu metot olup 4 parametre alacaktır.
+- tax() : Maaşa uygulanan vergiyi hesaplayacaktır.
+- Çalışanın maaşı 1000 TL'den az ise vergi uygulanmayacaktır.
+- Çalışanın maaşı 1000 TL'den fazla ise maaşının %3'ü kadar vergi uygulanacaktır.(Ham maaşına)
+- bonus() : Eğer çalışan haftada 40 saatten fazla çalışmış ise fazladan çalıştığı her saat başına 30 TL olacak şekilde bonus ücretleri hesaplayacaktır.
+- raiseSalary() : Çalışanın işe başlangıç yılına göre maaş artışını hesaplayacaktır. Şuan ki yılı 2023 olarak alın.
+- Eğer çalışan 10 yıldan az bir süredir çalışıyorsa maaşına %5 zam yapılacaktır.
+- Eğer çalışan 9 yıldan fazla ve 20 yıldan az çalışıyorsa maaşına %10 zam yapılacaktır.
+- Eğer çalışan 19 yıldan fazla çalışıyorsa %15 zam yapılacaktır.
+- toString() : Çalışana ait bilgileri ekrana bastıracaktır.
+
+### Ekran Çıktısı
+```java
+Adı : kemal
+Maaşı : 2000.0
+Çalışma Saati : 45
+Başlangıç Yılı : 1987
+Vergi : 60.0
+Bonus : 150.0
+Maaş Artışı : 300.0
+Vergi ve Bonuslar ile birlikte maaş : 2090.0
+Toplam Maaş : 2390.0
+```
+
 # Odev
 **Araç Sınıfı Oluşturma:**
 - Bir "Araç" sınıfı oluşturun. Bu sınıfın aşağıdaki özellikleri içermesi gerekiyor:
