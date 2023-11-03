@@ -313,5 +313,5 @@ Bu formül ile elde ettiğimiz sayı mükemmel sayı olmalıdır.
 Ödevde ihtiyacınız olan yapılar:
 - Bir sayının asal olup olmadığını bulup true/false döndüren bir fonksiyon.
 - Mersenne asallarını bulup, bize bunlar ile mükemmel sayı üreticek bir fonksiyon.
-**(Bu fonksiyonda 2 den başlayıp 500 de biten bir döngü kullanmanızı tavsiye ediyorum.
+**(Bu fonksiyonda 2 den başlayıp 50 de biten bir döngü kullanmanızı tavsiye ediyorum.
 Mersenne asallarını fonksiyon sürekli bulup, ekrana bu asallar ile üretilmiş mükemmel sayıları yazın.)**
